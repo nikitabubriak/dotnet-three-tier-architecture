@@ -18,6 +18,7 @@ namespace BLL.Services
         IUnitOfWork Database { get; set; }
 
         MapperConfiguration dishConfig = new MapperConfiguration(cfg => cfg.CreateMap<Dish, DishDTO>());
+        MapperConfiguration createDishConfig = new MapperConfiguration(cfg => cfg.CreateMap<DishDTO, Dish>());
 
         public MenuService(string connection)
         {
@@ -42,6 +43,14 @@ namespace BLL.Services
 
             var mapper = new Mapper(dishConfig);
             return mapper.Map<Dish, DishDTO>(dish);
+        }
+
+        public void CreateDish(DishDTO dishDTO)
+        {
+            var mapper = new Mapper(createDishConfig);
+            Dish dish = mapper.Map<DishDTO, Dish>(dishDTO);
+            Database.Dishes.Create(dish);
+            Database.Save();
         }
 
         public void Dispose()

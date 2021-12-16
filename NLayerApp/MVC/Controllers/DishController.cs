@@ -18,6 +18,7 @@ namespace MVC.Controllers
         IMenuService menuService;
 
         MapperConfiguration dishConfig = new MapperConfiguration(c => c.CreateMap<DishDTO, DishViewModel>());
+        MapperConfiguration createDishConfig = new MapperConfiguration(c => c.CreateMap<DishViewModel, DishDTO>());
 
         public DishController(IMenuService menuService)
         {
@@ -57,6 +58,8 @@ namespace MVC.Controllers
         }
 
         // GET: DishController/Create
+        [HttpGet]
+        //[ValidateAntiForgeryToken]
         public IActionResult Create()
         {
             return View();
@@ -65,15 +68,19 @@ namespace MVC.Controllers
         // POST: DishController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(IFormCollection collection)
+        public IActionResult Create(string Name)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                DishViewModel dish = new DishViewModel{ Name = Name };
+                var mapper = new Mapper(createDishConfig);
+                var dishDTO = mapper.Map<DishViewModel, DishDTO>(dish);
+                menuService.CreateDish(dishDTO);
+                return View(dish);
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                return Content(ex.Message);
             }
         }
 

@@ -446,3 +446,4 @@ E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\MVC\bin\Debug\net5.0\ru
 E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\MVC\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\MVC\obj\Debug\net5.0\Razor\Views\Dish\Index.cshtml.g.cs
 E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\MVC\obj\Debug\net5.0\Razor\Views\Dish\Details.cshtml.g.cs
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\MVC\obj\Debug\net5.0\Razor\Views\Dish\Create.cshtml.g.cs

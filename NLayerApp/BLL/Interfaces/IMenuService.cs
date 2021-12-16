@@ -13,6 +13,8 @@ namespace BLL.Interfaces
 
         DishDTO GetDish(int? id);
 
+        void CreateDish(DishDTO dishDTO);
+
         void Dispose();
     }
 }
