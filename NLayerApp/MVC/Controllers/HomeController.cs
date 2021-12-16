@@ -1,37 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using MVC.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using BLL.Interfaces;
-using BLL.DTO;
-using AutoMapper;
+using MVC.Models;
 
 namespace MVC.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        
 
-        IMenuService menuService;
-
-        MapperConfiguration dishConfig = new MapperConfiguration(c => c.CreateMap<DishDTO, DishViewModel>());
-
-        public HomeController(ILogger<HomeController> logger, IMenuService menuService)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            this.menuService = menuService;
         }
 
         public IActionResult Index()
         {
-            var menu = menuService.GetMenu();
-            var mapper = new Mapper(dishConfig);
-            var dishViewModel = mapper.Map<IEnumerable<DishDTO>, IEnumerable<DishViewModel>>(menu);
-            return View(dishViewModel);
+
+            return View();
         }
 
         public IActionResult Privacy()

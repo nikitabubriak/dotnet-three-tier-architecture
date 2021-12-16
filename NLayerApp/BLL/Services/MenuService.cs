@@ -30,6 +30,20 @@ namespace BLL.Services
             return mapper.Map<IEnumerable<Dish>, IEnumerable<DishDTO>>(Database.Dishes.GetAll());
         }
 
+        public DishDTO GetDish(int? id)
+        {
+            if (id == null)
+                throw new Exception();
+
+            var dish = Database.Dishes.Get(id.Value);
+
+            if (dish == null)
+                throw new Exception();
+
+            var mapper = new Mapper(dishConfig);
+            return mapper.Map<Dish, DishDTO>(dish);
+        }
+
         public void Dispose()
         {
             Database.Dispose();

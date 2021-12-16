@@ -21,7 +21,7 @@ namespace DAL.Repositories
 
         public IEnumerable<Dish> GetAll()
         {
-            return db.Dishes;//.Include(d => d.Ingredients);
+            return db.Dishes;//.Include(d => d.Ingredients);//.SelectMany(ing => ing.Name));
         }
 
         public Dish Get(int id)

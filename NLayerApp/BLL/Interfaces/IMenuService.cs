@@ -11,6 +11,8 @@ namespace BLL.Interfaces
     {
         IEnumerable<DishDTO> GetMenu();
 
+        DishDTO GetDish(int? id);
+
         void Dispose();
     }
 }

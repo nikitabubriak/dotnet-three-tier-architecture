@@ -1,0 +1,18 @@
+﻿@using MVC.Models
+@model DishViewModel
+
+@{
+    ViewData["Title"] = "Dish Page";
+}
+
+<dt>
+    @Html.DisplayNameFor(model => model.Name)
+</dt>
+<dd>
+    @Html.DisplayFor(model => model.Name)
+</dd>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
