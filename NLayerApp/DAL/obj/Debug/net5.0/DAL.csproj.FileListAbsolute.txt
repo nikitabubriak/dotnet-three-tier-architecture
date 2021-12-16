@@ -1,0 +1,15 @@
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\DAL\bin\Debug\net5.0\DAL.deps.json
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\DAL\bin\Debug\net5.0\DAL.runtimeconfig.json
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\DAL\bin\Debug\net5.0\DAL.runtimeconfig.dev.json
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\DAL\bin\Debug\net5.0\DAL.dll
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\DAL\bin\Debug\net5.0\ref\DAL.dll
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\DAL\bin\Debug\net5.0\DAL.pdb
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\DAL\obj\Debug\net5.0\DAL.csproj.AssemblyReference.cache
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\DAL\obj\Debug\net5.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\DAL\obj\Debug\net5.0\DAL.AssemblyInfoInputs.cache
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\DAL\obj\Debug\net5.0\DAL.AssemblyInfo.cs
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\DAL\obj\Debug\net5.0\DAL.csproj.CoreCompileInputs.cache
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\DAL\obj\Debug\net5.0\DAL.dll
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\DAL\obj\Debug\net5.0\ref\DAL.dll
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\DAL\obj\Debug\net5.0\DAL.pdb
+E:\KPI\NET\labs\dotnet-three-tier-architecture\NLayerApp\DAL\obj\Debug\net5.0\DAL.genruntimeconfig.cache

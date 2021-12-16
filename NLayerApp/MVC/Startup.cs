@@ -8,22 +8,31 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BLL.Interfaces;
+using BLL.Services;
+using DAL.EF;
+using Microsoft.EntityFrameworkCore;
 
 namespace MVC
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+
+        private string connectionString;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            connectionString = Configuration.GetConnectionString("DefaultConnection");
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.Add(new ServiceDescriptor(typeof(IMenuService), new MenuService(connectionString)));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
